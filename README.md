@@ -46,3 +46,10 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 19. Implement error handling for undefined variables and out-of-bound array access.
 20. When complete - all of your tests should pass. 
 21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
+###Nanodegree feed reader project
+This project use Jasmine (JavaScript Testing Framework)
+
+###Instructions
+* [Demo online](jotavejv.github.io/udacity/feeds/)
+* Download or clone this and open the index.html file
+* Jasmine should appear at the bottom. The "spec" should be green, meaning that all the tests have passed.
