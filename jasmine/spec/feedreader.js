@@ -62,8 +62,7 @@ $(function() {
          */
 
         it('the menu is hidden by default', function() {
-            var $menu = document.body.className;
-            expect($menu).toBe("menu-hidden");
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
         /* TODO: Write a test that ensures the menu changes
@@ -98,7 +97,7 @@ $(function() {
 
         it('loadFeed function is completed and there is at least a single .entry element within the .feed container', function() {
 
-            expect($('.entry').length).toBeGreaterThan(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
 
     });
@@ -117,15 +116,15 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(1, function() {
                 checkFeed = $(".feed").html();
+                done();
             });
-
-            done();
         });
 
         it('content changes when a new feed is loaded', function(done) {
-            loadFeed(2, done);
-
-            expect($(".feed").html()).not.toEqual(checkFeed);
+            loadFeed(2, function() {
+                expect($(".feed").html()).not.toEqual(checkFeed);
+                done();
+            });      
         });
 
     });
